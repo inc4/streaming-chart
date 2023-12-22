@@ -1,0 +1,217 @@
+.panel {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(31, 33, 46);
+  width: 300px;
+  min-width: 300px;
+}
+
+.label {
+  text-transform: uppercase;
+  color: rgb(177, 182, 198);
+  font-size: 13px;
+  margin: 0px 0px 12px;
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 800;
+}
+
+.switcher {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgba(15, 17, 26, 0.55);
+  border-radius: 6px;
+  padding: 2px;
+  margin-bottom: 24px;
+}
+
+.switcher_item {
+  width: 50%;
+  background: transparent;
+  height: 40px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(177, 182, 198);
+  background: none;
+  font-family: "Geogrotesque Wide", sans-serif;
+  transition: .2s;
+
+  svg {
+    fill: rgb(177, 182, 198);
+    margin-right: 6px;
+    transition: .2s;
+  }
+}
+
+.switch_up {
+  color: rgb(114, 242, 56);
+  background: rgba(114, 242, 56, 0.13);
+
+  svg {
+    fill: rgb(114, 242, 56);
+  }
+}
+
+.switch_down {
+  color: rgb(255, 73, 73);
+  background: rgba(255, 73, 73, 0.13);
+
+  svg {
+    fill: rgb(255, 73, 73);
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  min-height: 40px;
+  width: 100%;
+  padding: 0 5px 0 15px;
+  border-radius: 6px;
+  background: rgba(15, 17, 26, 0.55);
+  margin-bottom: 24px;
+}
+
+.coin {
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: -2px;
+}
+
+.dollar {
+  color: rgb(255, 255, 255);
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.input {
+  color: rgb(255, 255, 255);
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+.input-buttons {
+  display: flex;
+}
+
+.input-button {
+  margin-right: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(203, 215, 255, 0.075);
+  color: rgb(177, 182, 198);
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover {
+    background: rgba(203, 215, 255, 0.1);
+  }
+}
+
+.input-wrapper_multiplier {
+  width: 120px;
+  margin-bottom: 0;
+}
+
+.input-wrapper-left {
+  color: #b1b6c6;
+  font-size: 13px;
+  font-family: "Geogrotesque Wide", sans-serif;
+  margin-right: 10px;
+}
+
+.range-legend {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Geogrotesque Wide", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+.range-legend__green {
+  color: rgb(114, 242, 56);
+}
+
+.range-legend__red {
+  color: rgb(255, 73, 73);
+}
+
+.multiplier-wrapper {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.multiplier-wrapper__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.multiplier-wrapper__label {
+  color: rgb(177, 182, 198);
+  font-size: 12px;
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.multiplier-wrapper__price {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.submit {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: all 0.1s ease 0s;
+  appearance: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  user-select: none;
+  height: 48px;
+  padding: 0px 24px;
+  border-radius: 8px;
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 14px;
+  color: rgb(20, 23, 34);
+  width: 100%;
+  margin-top: 24px;
+  background: rgb(134, 244, 84);
+  box-shadow: rgba(118, 255, 25, 0.4) 0px 0px 10px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.15) 0px -3px 0px inset, rgb(59, 198, 14) 0px 0px 15px inset;
+
+  &_down {
+    background: rgb(255, 106, 106);
+    box-shadow: rgba(255, 73, 73, 0.42) 0px 0px 10px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset, rgba(0, 0, 0, 0.15) 0px -3px 0px inset, rgb(255, 55, 55) 0px 0px 15px inset;
+  }
+}

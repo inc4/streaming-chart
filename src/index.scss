@@ -1,0 +1,19 @@
+@import "./styles/global";
+@import "./styles/panel";
+@import "./styles/range-input";
+@import "./styles/top-panel";
+
+.toggle-sidebar {
+  margin-right: 5px;
+  background-color: transparent;
+  border: 0;
+}
+
+.wrapper {
+  width: 700px;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+}

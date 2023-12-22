@@ -4,17 +4,23 @@ import Chart from 'chart.js/auto';
 import 'chartjs-adapter-luxon';
 import StreamingPlugin from 'chartjs-plugin-streaming';
 import ZoomPlugin from 'chartjs-plugin-zoom';
+import { memo } from 'react';
 
 Chart.register(StreamingPlugin, ZoomPlugin);
 
-const ChartJS = () => {
+const ChartJS = memo(({handlePrice}) => {
+  //we use simple variable instead of state because of specific chart library behavior
   let price;
+
   useEffect(() => {
     const socket = new WebSocket('wss://casino777.inc4.net/ws/btcusdt');
     socket.addEventListener('message', (event) => {
       price = +event.data;
+      handlePrice(price);
+
     });
-  }, [])
+  }, []);
+
   return (
     <Line
       data={{
@@ -24,17 +30,18 @@ const ChartJS = () => {
       }}
       options={{
         scales: {
+          y: {
+            position: 'right',
+          },
           x: {
             type: 'realtime',
             realtime: {
               frameRate: 30,
               duration: 20000,
-              refresh: 500,    // onRefresh callback will be called every 1000 ms
+              refresh: 500,
               ttl: 80000,
               delay: 500,
               onRefresh: function (chart) {
-                // Update the chart's data here
-                console.log(price);
                 chart.data.datasets[0].data.push({
                   x: Date.now(),
                   y: price
@@ -77,10 +84,14 @@ const ChartJS = () => {
                 maxDuration: 80000
               }
             }
-          }}
+          },
+          legend: {
+            display: false
+          }
+        }
       }}
     />
   );
-}
+});
 
 export default ChartJS;

@@ -1,0 +1,47 @@
+.top-panel {
+  display: flex;
+  font-family: sans-serif;
+  align-items: center;
+  margin: 20px;
+}
+
+.top-panel__price {
+  font-size: 32px;
+  color: rgb(114, 242, 56);
+
+  svg {
+    fill: rgb(114, 242, 56);
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+  }
+
+  &_red {
+    color: rgb(255, 73, 73);
+
+    svg {
+      fill: rgb(255, 73, 73);
+    }
+  }
+}
+
+.top-panel__btc {
+  width: 40px;
+  height: auto;
+}
+
+.top-panel__info {
+  color: rgb(177, 182, 198);
+  font-size: 12px;
+  margin-left: 12px;
+  display: flex;
+  gap: 5px;
+}
+
+.green {
+  color: rgb(114, 242, 56);
+}
+
+.red {
+  color: rgb(255, 73, 73);
+}
