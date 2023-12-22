@@ -1,4 +1,4 @@
-import coin from '../../assets/coin.webp';
+import coin from '../../assets/coin.png';
 import {useState} from 'react';
 import RangeInput from '../RangeInput';
 
